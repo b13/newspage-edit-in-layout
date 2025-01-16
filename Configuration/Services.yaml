@@ -1,0 +1,13 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  B13\NewspageEditInLayout\:
+    resource: '../Classes/*'
+
+  B13\NewspageEditInLayout\EventListener\AddFieldsToPageLayout:
+    tags:
+      - name: event.listener
+        identifier: 'ext-newspage-newsLayoutListener'
